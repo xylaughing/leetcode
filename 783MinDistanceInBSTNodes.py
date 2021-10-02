@@ -10,14 +10,15 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
-        def preorder(root):
+        def inorder(root):
             if root is None: return []            
-            return preorder(root.left) + [root.val] + preorder(root.right)
+            return inorder(root.left) + [root.val] + inorder(root.right)
         
-        arr = preorder(root)
+        arr = inorder(root)
         for i in range(len(arr)-1):
             temp = arr[i+1] - arr[i]
             if temp < 0: arr[i] = - temp
             else: arr[i] = temp
         
         return min(arr[0:len(arr)-1])
+            
