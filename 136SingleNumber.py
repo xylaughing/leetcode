@@ -3,6 +3,11 @@ class Solution(object):
         """
         :type nums: List[int]
         :rtype: int
+        """        
+        for x, y in Counter(nums).items():
+            if y == 1: 
+                return x
+        
         """
         mem = []
         if len(nums) == 1: return nums[0]
@@ -14,3 +19,4 @@ class Solution(object):
                 else:
                     mem.append(nums[i])
         return nums[i+1]
+        """
