@@ -8,3 +8,5 @@ class Solution(object):
         for x in dic.values():
             if x != 1: return True
         return False
+    
+    # return [True for x in dic.values() if x != 1]
