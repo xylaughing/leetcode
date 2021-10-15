@@ -12,3 +12,11 @@ class Solution(object):
         
         if minInd == len(s): return -1
         else: return minInd
+        
+        
+        """ Slower but why
+        for i in range(len(s)):
+            if ct[s[i]] == 1:
+                return i
+        return -1
+        """
