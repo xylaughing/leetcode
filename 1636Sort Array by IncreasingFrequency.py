@@ -6,6 +6,7 @@ class Solution(object):
         """
         dic, res = {}, []
         ct = Counter(nums)
+        """
         for x in ct:
             if ct[x] not in dic: 
                 dic[ct[x]] = [x]
@@ -17,3 +18,6 @@ class Solution(object):
             for j in sorted(dic[i], reverse = True):
                  res.extend([j] * i)
         return res
+        """
+    
+        return sorted(sorted(nums, reverse=True), key=lambda x: ct[x])
