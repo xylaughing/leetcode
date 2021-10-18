@@ -17,3 +17,10 @@ class Solution(object):
         for i in range(len(res)-len(s)+1):
              if list(res[i:i+len(s)]) == list(s): 
                 return True
+        
+        """ faster
+        ts = iter(t)
+        for x in s:
+            if x not in ts: return False
+        return True
+        """
