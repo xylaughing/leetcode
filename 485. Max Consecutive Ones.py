@@ -4,6 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        """
         maxs, temp = 0, 0
         for i in range(len(nums)):
             if nums[i] == 1: temp += 1
@@ -11,3 +12,7 @@ class Solution(object):
                 if maxs < temp: maxs = temp
                 temp = 0
         return max(maxs, temp)
+        """
+        
+        div = ''.join(map(str, nums)).split('0')
+        return max(map(len, div))
