@@ -4,6 +4,8 @@ class Solution(object):
         :type candyType: List[int]
         :rtype: int
         """
+        """
         ct = Counter(candyType)
-        t, n = len(ct.keys()), len(candyType) / 2
-        return  n if n < t else t
+        return  min(len(ct.keys()), len(candyType)//2)        
+        """
+        return min(len(candyType)//2, len(set(candyType)))
