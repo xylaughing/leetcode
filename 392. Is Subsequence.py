@@ -14,9 +14,7 @@ class Solution(object):
                 res += s[j]
                 i += 1
                 j += 1
-        for i in range(len(res)-len(s)+1):
-             if list(res[i:i+len(s)]) == list(s): 
-                return True
+        return True if res == s else False
         
         """ faster
         ts = iter(t)
