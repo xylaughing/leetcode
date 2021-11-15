@@ -11,6 +11,7 @@ class Solution(object):
         :type root2: TreeNode
         :rtype: bool
         """
+        """
         def getLeaves(root, leaves = []):
             if not root: return 
             if not root.left and not root.right:
@@ -21,4 +22,13 @@ class Solution(object):
         res1, res2 = [],[] 
         getLeaves(root1, res1)
         getLeaves(root2, res2)
-        return True if res1 == res2 else False
+        return res1 == res2
+        """
+        
+        def getLeaves(root):
+            if not root: return []
+            if not root.left and not root.right:
+                return [root.val]
+            return getLeaves(root.left) + getLeaves(root.right)
+        
+        return getLeaves(root1) == getLeaves(root2)
