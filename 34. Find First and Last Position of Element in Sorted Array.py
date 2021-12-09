@@ -6,7 +6,6 @@ class Solution(object):
         :rtype: List[int]
         """
         l, r = 0, len(nums)-1
-        #if l == r: return [0,0] if nums[0] == target else [-1,-1]
         while l < r:
             mid = (l + r) // 2
             if nums[mid] == target:
